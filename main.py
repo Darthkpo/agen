@@ -1,4 +1,5 @@
 import time
+import sys
 from random import randint
 
 print "Generador de actas v1.0 - fsociety"
@@ -26,7 +27,7 @@ hra_end = "%02d:%02d:%02d" % (hra_end_h,hra_end_m,hra_end_s)
 
 
 asistentes = [ "Nicolas Aguirre", "Facundo Winter", "Guillermo Rodriguez" ]
-if randint(0,100) > 55 :
+if "-nomaxi" not in sys.argv:
 	asistentes.append("Maximiliano Bizera")
 
 print "FECHA: " + date
